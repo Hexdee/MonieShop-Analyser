@@ -14,10 +14,11 @@ Analyse MonieShop sales transactions to get
 
 - main.py -> main file
 - sample-data -> test data
+- README.md -> this file
 
 ### Prerequisites
 
-python3
+- python3
 
 ### Steps to test
 
