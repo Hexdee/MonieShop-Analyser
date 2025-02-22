@@ -2,6 +2,7 @@
 
 from os import listdir, path
 import datetime
+from calendar import month_name
 
 """
 Monieshop Analytics software
@@ -156,7 +157,9 @@ class MonieshopAnalyser:
         print(f"2. Highest sales value in a day: ${highest_value_day[1]:.2f} on {highest_value_day[0]}")
         print(f"3. Most sold product ID: {most_sold_product[0]} with {most_sold_product[1]} units")
         print("4. Highest sales staff ID for each month:")
+        
         for month, staff in sorted(monthly_top_staff.items(), key=lambda x: x[0]):
+            month = month_name[int(month[-2:])]
             print(f"    {month}: Staff ID {staff[0]} with ${staff[1]:.2f} sales")
         print(f"5. Peak hour by average transaction volume: {peak_hour[0]}:00-{peak_hour[0]}:59 with an average transaction volume of {peak_hour[1]:.2f}")
 
