@@ -132,7 +132,7 @@ class MonieshopAnalyser:
         # Update hourly volumes
         if hour not in self.hourly_volumes:
             self.hourly_volumes[hour] = []
-            self.hourly_volumes[hour].append(sale_volume)
+        self.hourly_volumes[hour].append(sale_volume)
 
     def print_metrics(self):
         """
